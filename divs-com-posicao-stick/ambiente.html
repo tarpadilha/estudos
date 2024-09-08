@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Sticky</title>
+    <style>
+        body {
+            color: white;
+            font: 13.5px Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .titulo {
+            width: 925px;
+            height: 80px;
+            background-color: rgb(43, 43, 214);
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .cor1 {
+            width: auto;
+            height: 400px;
+            background-color: rgb(177, 236, 59);
+        }
+
+        .stk-cor1 {
+            width: 170px;
+            height: 140px;
+            background-color: rgb(218, 42, 42);
+            position: relative;
+            top: 40px;
+            left: 60px;
+            border-radius: 15px;
+        }
+        
+        .cor2 {
+            width: auto;
+            height: 800px;
+            background-color: rgb(201, 201, 27);
+            padding: 30px;
+        }
+
+        .stk1-cor2 {
+            width: 140px;
+            height: 40px;
+            background-color: rgb(218, 42, 42);
+            position: sticky;
+            top: 140px;
+            left: 155px;
+            border-radius: 15px;
+        }
+
+        .stk2-cor2 {
+            width: 170px;
+            height: 150px;
+            background-color: rgb(218, 42, 42);
+            margin-top: 40px;
+            margin-bottom: 60px;
+            position: sticky;
+            top: 240px;
+            left: 300px;
+            border-radius: 15px;
+        }
+
+        .stk3-cor2 {
+            width: 370px;
+            height: 140px;
+            background-color: rgb(218, 42, 42);
+            margin-top: 50px;
+            margin-bottom: 240px;
+            position: sticky;
+            top: 640px;
+            left: 480px;
+            border-radius: 15px;
+        }
+
+        .cor3 {
+            width: auto;
+            height: 400px;
+            background-color: rgb(177, 236, 59);
+        }
+        .cor4 {
+            width: auto;
+            height: 400px;
+            background-color: rgb(201, 201, 27);
+        }
+
+        .cor5 {
+            width: auto;
+            height: 400px;
+            background-color: rgb(177, 236, 59);
+        }
+
+        .cor6 {
+            width: auto;
+            height: 400px;
+            background-color: rgb(201, 201, 27);
+        }
+
+        .rodape {
+            width: auto;
+            height: 80px;
+            background-color: rgb(43, 43, 214);
+            text-align: center;
+            line-height: 80px;
+        }
+
+        h3 {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Lorem, ipsum dolor</h1>
+    </div>
+    <div class="cor1">
+        <div class="stk-cor1"></div>
+    </div>
+    <div class="cor2">
+        <div class="stk1-cor2"></div>
+        <div class="stk2-cor2"></div>
+        <div class="stk3-cor2"></div>
+    </div>
+    <div class="cor3"></div>
+    <div class="cor4"></div>
+    <div class="cor5"></div>
+    <div class="cor6"></div>
+    <div class="rodape">
+        <h3>Lorem ipsum dolor</h3>
+    </div>
+</body>
+</html>

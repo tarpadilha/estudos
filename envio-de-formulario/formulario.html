@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Candidato</title>
+</head>
+<body style="font-family: monospace;">
+    <div style="padding: 15px 15px 5px 15px;" id="results"></div>
+    <p style="margin-left: 15px;"><a href="pagina.html" rel="prev" target="_self">Voltar</a></p>
+
+    <script>
+    const resultsList = document.getElementById('results') 
+    new URLSearchParams(window.location.search).forEach((value, name) => {
+        resultsList.append(`${name}: ${value}`) 
+        resultsList.append(document.createElement('br'))
+        }
+    )
+    </script>
+</body>
+</html>

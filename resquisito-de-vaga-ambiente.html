@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Requisito de Vaga (Estudo Js)</title>
+        <style>
+            body{
+                background-color: lightcyan;
+                color: maroon;
+                font: normal 12pt montserrat;
+                text-align: center;
+            }
+            div#voltanome{
+                font-size: 10pt;
+                color: red;
+            }
+            div#voltaresidencia{
+                font-size: 10pt;
+                color: red;
+            }
+            div#voltaescolaridade{
+                font-size: 10pt;
+                color: red;
+            }
+            div#voltatempodetrabalho{
+                font-size: 10pt;
+                color: red;
+            }
+        </style>
+</head>
+<body>
+    <h1>Formulário para Requisito de Vaga</h1>
+    <h3>Preencha o formulário com todas as informações</h3>
+    <p>Seu nome: <input type="text" name="nome" id="nome" onmouseenter="mouseemcimanome()" onmouseleave="mousesaindodonome()"> <div id="voltanome"></div></p>
+    <p>Sua idade: <input type="number" name="idade" id="idade"></p>
+    <p>Onde é a sua residência? <input type="text" name="residencia" id="residencia" onmouseenter="mouseemcimaresidencia()" onmouseleave="mousesaindoresidencia()"> <div id="voltaresidencia"></div></p>
+    <p>Qual é a sua escolaridade? <input type="text" name="escolaridade" id="escolaridade" onmouseenter="mousecimaescolaridade()" onmouseleave="mousesaindoescolaridade()"> <div id="voltaescolaridade"></div></p>
+    <p>Há quanto tempo trabalha na área? <input type="number" name="tempodetrabalho" id="tempodetrabalho" onmouseenter="mousecimatempodetrabalho()" onmouseleave="mousesaindotempodetrabalho()"> <div id="voltatempodetrabalho"></div></p>
+    <p id="resposta">Aceita os termos de envio de documentos? <input type="checkbox" name="aceite" id="aceite" onclick="aceitecheque()"></p>
+    <input type="button" value="Enviar" onclick="envio()">
+    <p id="resultadoprocesso"></p>
+            <script>
+                function mouseemcimanome(){
+                    document.querySelector('div#voltanome').innerText='Somente o primeiro nome.'
+                }
+                function mousesaindodonome(){
+                    document.querySelector('div#voltanome').innerText=null
+                }
+                function mouseemcimaresidencia(){
+                    document.querySelector('div#voltaresidencia').innerText='Somente a sigla do estado.'
+                }
+                function mousesaindoresidencia(){
+                    document.querySelector('div#voltaresidencia').innerText=null
+                }
+                function mousecimaescolaridade(){
+                    document.querySelector('div#voltaescolaridade').innerText='Responda como superior, médio ou técnico.'
+                } 
+                function mousesaindoescolaridade(){
+                    document.querySelector('div#voltaescolaridade').innerText=null
+                }
+                function mousecimatempodetrabalho(){
+                    document.querySelector('div#voltatempodetrabalho').innerText='Coloque o tempo em meses.'
+                }
+                function mousesaindotempodetrabalho(){
+                    document.querySelector('div#voltatempodetrabalho').innerText=null
+                }
+                function aceitecheque(){
+                    document.getElementById('resposta').innerHTML='<strong>Sua resposta foi registrada.</strong>'
+                }
+                function envio(){                    
+                    var nomedocandidato=String(document.getElementById('nome').value)
+                    var testeidade=Number.parseInt(document.getElementById('idade').value)>=18
+                    var testeresidencia=String(document.getElementById('residencia').value).toUpperCase()=='BA'
+                    var testeescolaridade=String(document.getElementById('escolaridade').value).toLowerCase()=='superior'
+                    var testetempodetrabalho=Number.parseInt(document.getElementById('tempodetrabalho').value)>=12
+                    if(testeidade&&testeresidencia&&testeescolaridade&&testetempodetrabalho==true){
+                        document.getElementById('resultadoprocesso').innerHTML=`Parabéns, <strong>${nomedocandidato}!</strong> Você foi <strong>pré-aprovado</strong> para a vaga!`    
+                    }else{
+                        document.getElementById('resultadoprocesso').innerHTML=`Infelizmente você não foi aprovado, ${nomedocandidato}.`
+                    }
+                    
+                    
+                    
+                }
+        </script>
+</body>
+</html>

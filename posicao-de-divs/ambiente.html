@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de position</title>
+    <style>
+        div {
+            border-radius: 15px;
+        }
+        .div-central {
+            width: 1000px;
+            height: 1000px;
+            background-color: green;
+        }
+        .div-amarela {
+            width: 500px;
+            height: 300px;
+            background-color: yellow;
+        }
+        .div-azul {
+            width: 500px;
+            height: 300px;
+            background-color: blue;
+            position: relative;
+        }
+        .div-vermelha {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            top: 30px;
+            left: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-central">
+        <div class="div-amarela"></div>
+        <div class="div-azul">
+            <div class="div-vermelha"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 600px;
+            margin: auto;
+            font-family: Helvetica, sans-serif;
+        }
+        button {
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dados para Cadastro</h1>
+    <form action="formulario.html" method="get">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome">
+            </p>
+            <p>
+                <label for="idade">Idade: </label>
+                <input type="number" name="idade" id="idade" min="1" max="35">
+            </p>
+            <p>
+                <label for="ano-nascimento">Ano de nascimento: </label>
+                <input type="number" name="ano_de_nascimento" id="ano-nascimento" min="1" max="2024">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Escolaridade</legend>
+            <p>
+                <input type="radio" name="escolaridade" id="medio" value="medio">
+                <label for="medio">Médio</label>
+                <input type="radio" name="escolaridade" id="tecnico" value="tecnico">
+                <label for="tecnico">Técnico</label>
+                <input type="radio" name="escolaridade" id="superior" value="superior">
+                <label for="superior">Superior</label>
+                <input type="radio" name="escolaridade" id="mestrado" value="mestrado">
+                <label for="mestrado">Mestrado</label>
+                <input type="radio" name="escolaridade" id="doutorado" value="doutorado">
+                <label for="doutorado">Doutorado</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Línguas Faladas</legend>
+            <p>
+                <input type="checkbox" name="linguagens" id="portugues" value="portugues">
+                <label for="portugues">Português</label>
+                <input type="checkbox" name="linguagens" id="ingles" value="ingles">
+                <label for="ingles">Inglês</label>
+                <input type="checkbox" name="linguagens" id="espanhol" value="espanhol">
+                <label for="espanhol">Espanhol</label>
+                <input type="checkbox" name="linguagens" id="alemao" value="alemao">
+                <label for="alemao">Alemão</label>
+                <input type="checkbox" name="linguagens" id="frances" value="frances">
+                <label for="frances">Francês</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Dados de Acesso</legend>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" id="senha" required>
+            </p>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
