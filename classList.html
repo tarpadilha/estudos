@@ -1,0 +1,48 @@
+<html>
+	<head>
+	
+	<style>
+		body {
+			height: 100vh;
+			position: relative;
+		}
+		button {
+			display: block;
+			padding: 40px;
+			font-size: large;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+		.active {
+	  	background-color: green;
+		  color: white;
+		}
+	</style>
+	</head>
+
+	<body>
+	<button id="meuBotao" onclick="adicionarClasse()">Clique aqui</button>
+	</body>
+
+	<script>
+	const botao = document.getElementById("meuBotao");
+	let verde = false
+
+	function adicionarClasse() {
+	if (!verde) {
+		botao.classList.add("active")
+	}
+	else {
+		botao.classList.remove("active")
+	}
+	verde = !verde
+	console.log(`O fundo verde está ${verde}`)
+	}
+
+	// Agora, o botão terá a classe "active"
+	//console.log(botao.classList); // Saída: DOMTokenList ["active"]
+	</script>
+</html>
