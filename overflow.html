@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+    :root {
+        --cor01: #E6C9AC;
+        --cor02: #859DA6;
+        --cor03: #ACD7E6;
+        --cor04: #917C68;
+        --cor05: #385B66;
+        --cor06: #3C2917;
+    }
+
+    body {
+        font: normal 18px 'Abril Fatface', sans-serif;
+        background-image: linear-gradient(to right, var(--cor05), var(--cor01));
+    }
+    
+    div#container {
+        width: 400px;
+        height: 450px;
+        background-color: var(--cor03);
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20% 0 0 20%;
+        border: 15px dashed var(--cor06);
+        border-right-width: 12px;
+        padding: 15px;
+        box-shadow: 0 0 13px rgb(34, 34, 34);
+
+    }
+    
+    div#paragrafo {
+        text-align: justify;
+        text-indent: 45px;
+        color: var(--cor05);
+    }
+    
+    h1 {
+        color: var(--cor06);
+        text-align: center;
+        padding-left: 45px;
+    }
+
+    p {
+        padding: 0 10px;
+    }
+
+</style>
+<body>
+    <div id="container">
+        <h1>Teste de Overflow</h1>
+        <div id="paragrafo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam qui, libero aut aliquid ut deserunt unde incidunt soluta minima, eum maiores. Itaque dignissimos consequatur voluptatem earum, ex praesentium quia et! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur officiis, quam vel consectetur sint laborum. Minima nam beatae voluptatem a fugiat repellendus. Officia maiores placeat reprehenderit fuga voluptatum, expedita deserunt.</p>
+            <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla aspernatur, veritatis officiis quam et voluptas perferendis sed ea labore obcaecati distinctio corporis eligendi illum architecto repellat asperiores iusto, deserunt fuga?</span><span>Sequi, ab expedita? Itaque dignissimos eaque, a voluptatem corporis minus sapiente error aut architecto neque, debitis molestiae ea perspiciatis nihil nisi aliquid quasi dolor nobis numquam atque! A, ipsam quos.</span></p>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id velit blanditiis sint in voluptatibus ipsa voluptate corrupti nobis voluptates, aliquid perspiciatis officia quia ad, vitae enim suscipit. Repudiandae, sit nesciunt?</span><span>Dicta culpa voluptatem quidem nesciunt, facere sequi commodi consequatur consectetur repudiandae illum quis assumenda. Ipsum labore ab, voluptate deleniti accusantium veniam doloribus ad sed? Maxime aut est explicabo omnis earum?</span></p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
