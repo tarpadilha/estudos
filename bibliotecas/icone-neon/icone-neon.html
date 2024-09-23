@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #373737;
+            height: 100vh;
+        }
+
+        div#central {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            aspect-ratio: 1;
+            font-size: 1.5rem;
+            color: #7a7a7a;
+            background-color: #373737;
+            border-radius: 50%;
+            transition: color .5s ease-in-out;
+            text-decoration: none;
+        }
+
+        @property --fill {
+            syntax: '<percentage>';
+            inherits: true;
+            initial-value: 0%;
+        }
+
+        a:hover {
+            color: greenyellow;
+            --fill: 100%;
+        }
+        
+        a::after {
+            position: absolute;
+            z-index: -1;
+            content: ''; /*Necessário para exibir o pseudo-elemento*/
+            inset: -3px; /*Controla o tamanho do gradiente*/
+            border-radius: inherit; /*Pega a mesma borda do link*/
+
+            background: conic-gradient(greenyellow var(--fill), transparent var(--fill)); /*Deixa a cor de fundo transparente e muda de cor quando faz o hover*/
+            transition: --fill .6s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="central"><a href="#">&#x2714</a></div>
+</body>
+</html>
