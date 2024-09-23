@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparência</title>
+    <style>
+        body {
+            background-image: url('imagens/plano-de-fundo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            font: normal 15px Arial, sans-serif;
+        }
+
+        div.circulo {
+            background-color: #5f3d6e;
+            border-radius: 50%;
+        }
+        
+        div#circ1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 15%;
+            top: 10%;
+        }
+        
+        div#circ2 {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            top: 140%;
+            left: 120%;
+        }
+
+        div#transparencia {
+            width: 350px;
+            height: 600px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(194, 134, 206, 0.733);
+            border-radius: 30px;
+            position: relative;
+            right: 50%;
+            bottom: 90%;
+            backdrop-filter: blur(8px);
+        }
+
+        div#transparencia > h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="circulo" id="circ1">
+        <div class="circulo" id="circ2">
+            <div id="transparencia">
+                <h1>Aparência de vidro</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

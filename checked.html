@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked</title>
+    <style>
+    div#container{
+        position: relative;
+    }
+    
+    .cont-escondido {
+        display: none;
+        width: 500px;
+        text-align: justify;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        top: 30px;
+        left: 60px;
+    }
+
+    input#icursos:checked ~.cont-escondido {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <h1>Teste de checked</h1>
+    <div id="container">
+        <input type="checkbox" name="cursos" id="icursos">
+        <label for="icursos">Português</label>
+        <div class="cont-escondido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui saepe, repudiandae ratione modi itaque non eveniet a, et deleniti dolorum. Amet fuga pariatur mollitia sit, dignissimos odit eligendi maxime.</div>
+    </div>
+</body>
+</html>

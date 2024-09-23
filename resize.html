@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Source sans', sans-serif;
+        }
+        div#container {
+            display: block;
+            margin: auto; /*O elemento se centraliza horizontalmente*/
+
+            /*O elemento se centraliza horizontalmente*/
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+
+            width: 730px;
+            height: 450px;
+            background-color: blue;
+            border-radius: 20px;
+            resize: both;
+            overflow: auto;
+            color: white;
+            padding: 0px 30px;
+            text-align: justify;
+            font-size: 36px;
+        }
+
+        h1:hover {
+            transform: scale(1.2);
+            transition-duration: .25s;
+        }
+        
+        div#container:hover {
+            background-color: #393955;
+            transition-duration: .25s;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #2B2B33">Teste de Resize</h1>
+    <div id="container">
+        
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati voluptatibus vitae commodi! Adipisci, voluptas dignissimos perferendis praesentium at ratione?</p>
+
+        <p>Redimensionador no canto inferior direito.</p>
+
+    </div>
+
+</body>
+</html>
